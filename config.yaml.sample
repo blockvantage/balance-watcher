@@ -1,0 +1,27 @@
+ethereum:
+  node_url: "https://mainnet.infura.io/v3/YOUR_API_KEY"
+  private_key: "YOUR_PRIVATE_KEY" # For the funding account, without 0x prefix
+
+monitoring:
+  check_interval: 300 # seconds
+  balance_threshold: "0.1" # ETH
+  refill_amount: "0.5" # ETH
+  max_refill_amount: "2.0" # ETH
+  refill_threshold_count: 3 # Number of refills before increasing amount
+  refill_threshold_window: 86400 # 24 hours in seconds
+
+workers:
+  pool_size: 10
+
+telegram:
+  bot_token: "YOUR_BOT_TOKEN"
+  chat_id: "YOUR_CHAT_ID"
+
+database:
+  path: "./history.db"
+
+# List of addresses to monitor
+addresses:
+  - "0x123456789abcdef123456789abcdef123456789a"
+  - "0x987654321fedcba987654321fedcba987654321"
+  # Add more addresses as needed
